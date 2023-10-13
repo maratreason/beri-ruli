@@ -1,0 +1,36 @@
+.tip {
+  position: relative;
+  z-index: 2;
+  width: 25rem;
+  min-height: 6.4rem;
+  padding: 0.8rem 1.6rem;
+  background: var(--white);
+  border-radius: 0.2rem;
+  box-shadow: var(--shadow-1);
+
+  &__header {
+    &-text {
+      color: var(--grey);
+    }
+
+    &-number {
+    }
+  }
+
+  &__link {
+    color: var(--green);
+    font-family: ProximaNova-Bold, sans-serif;
+  }
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: -0.8rem;
+    z-index: -1;
+    width: 1.6rem;
+    height: 1.6rem;
+    background: var(--white);
+    transform: translateY(-50%) rotate(45deg);
+    content: "";
+  }
+}

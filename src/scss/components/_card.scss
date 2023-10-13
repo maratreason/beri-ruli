@@ -1,0 +1,158 @@
+.card {
+  min-width: 27rem;
+  min-height: 35rem;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-5);
+
+  &:hover {
+    box-shadow: var(--shadow-1);
+  }
+
+  &-header {
+    position: relative;
+    z-index: 1;
+
+    &-img {
+      height: 100%;
+      cursor: pointer;
+    }
+
+    &__yellow {
+      &-list {
+        position: absolute;
+        top: 1.5rem;
+        left: 1rem;
+        width: 15rem;
+      }
+
+      &-item {
+        @include text-card-picture;
+
+        height: 3.4rem;
+        padding: 0 1rem;
+        text-align: center;
+        background: rgba(#FCEC4F, 0.77);
+        border-radius: var(--radius-5);
+
+        &:not(:last-child) {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+
+    &__blue {
+      &-list {
+        position: absolute;
+        top: 1.5rem;
+        right: 1rem;
+        width: 15rem;
+      }
+
+      &-item {
+        @include text-card-picture;
+
+        height: 3.4rem;
+        padding: 0 1rem;
+        color: var(--white);
+        text-align: center;
+        background: var(--blue);
+        border-radius: var(--radius-5);
+
+        &:not(:last-child) {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+
+  &-content {
+    @include text-black;
+
+    padding: 2rem;
+    font-size: 1.6rem;
+
+    &__link {
+      margin-bottom: 1rem; 
+      color: var(--blue);
+      font-size: 1.8rem;
+    }
+
+    &__title {
+      @include text-card-title;
+
+      margin-bottom: 1rem;
+    }
+
+    &__year {
+      margin-bottom: 1rem;
+    }
+
+    &__item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      &-value {
+        @include text-bold;
+      }
+    }
+  }
+
+  &-btn {
+    @include text-card-btn;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0;
+    color: var(--blue);
+    border: 1px solid var(--blue);
+    border-radius: 0 0 var(--radius-5) var(--radius-5);
+
+    &.btn--blue {
+      color: var(--white);
+      background: var(--blue);
+      border-color: var(--blue);
+    }
+
+    &.btn--grey {
+      color: var(--black);
+      background: var(--navigation-bg);
+      border-color: var(--navigation-bg);
+    }
+  }
+
+  &.card--small {
+    width: 17rem;
+    min-height: 19.2rem;
+    border-radius: 0.2rem;
+
+    .card__header-item:nth-child(1) {
+      display: none;
+    }
+
+    .card__content-info {
+      display: none;
+    }
+
+    .card__content-title {
+      font-size: 1.2rem;
+      line-height: 1.6rem;
+    }
+
+    .card__footer {
+      gap: 0;
+      justify-content: space-between;
+    }
+
+    .card__footer-price {
+      font-size: 1.8rem;
+    }
+
+    .card__footer-oldprice {
+      font-size: 1.2rem;
+    }
+  }
+}

@@ -1,0 +1,51 @@
+:root {
+  // Colors
+  --black: #242321;
+  --yellow: #FCEC4F;
+  --blue: #0088CF;
+  --blue-light: rgba(0, 136, 207, 0.12);
+  --grey: #959797;
+  --grey-light: #989898;
+  --grey-line: #c4c4c4;
+  --card-border: #e5e5e5;
+  --navigation-bg: #f5f5f9;
+  --red: #cb2b2f;
+  --white: #fff;
+
+  // Errors
+  --error-text: #da2c2c;
+  --error-bg: #fce6e6;
+
+  // Typography
+  --fs-1: 4.8rem;
+  --fs-2: 3.6rem;
+  --fs-3: 2.6rem;
+  --fs-4: 1.8rem;
+  --fs-5: 1.5rem;
+  --fs-6: 1.4rem;
+
+  // Font weight
+  --fw-300: 300;
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-600: 600;
+  --fw-700: 700;
+  --fw-800: 800;
+  --fw-900: 900;
+
+  // Spacing
+  --section-padding: 35px;
+
+  // Shadow
+  --shadow-1: 0px 5px 15px 0px rgba(36, 35, 33, 0.07);
+
+  // Border Radius
+  --radius-3: 3px;
+  --radius-5: 5px;
+
+  // Transition
+  --transition-1: 0.25s ease;
+  --transition-2: 0.5s ease;
+  --transition-10: 1s ease;
+
+}

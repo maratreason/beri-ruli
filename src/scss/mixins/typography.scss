@@ -1,0 +1,111 @@
+@mixin title {
+  font-size: 4.2rem;
+  font-family: 'Gilroy-900', sans-serif;
+  line-height: 5.2rem;
+
+  @media screen and (max-width: 1100px) {
+    font-size: 3rem;
+    font-family: 'Gilroy-900', sans-serif;
+    line-height: 4.4rem;
+  }
+}
+
+@mixin title-2 {
+  font-size: 3rem;
+  font-family: 'Gilroy-900', sans-serif;
+  line-height: 4.6rem;
+
+  @media screen and (max-width: 1100px) {
+    font-size: 2.4rem;
+    font-family: 'Gilroy-900', sans-serif;
+    line-height: 3.4rem;
+  }
+}
+
+@mixin title-3 {
+  font-size: 2.4rem;
+  font-family: 'Gilroy-800', sans-serif;
+  line-height: 3rem;
+}
+
+@mixin title-4 {
+  font-size: 2rem;
+  font-family: 'Gilroy-700', sans-serif;
+  line-height: 3rem;
+}
+
+@mixin title-4-bold {
+  font-size: 2rem;
+  font-family: 'Gilroy-800', sans-serif;
+  line-height: 2.6rem;
+}
+
+@mixin title-4-step {
+  font-size: 2rem;
+  font-family: 'Gilroy-900', sans-serif;
+  line-height: 4.5rem;
+}
+
+@mixin title-5 {
+  font-size: 1.8rem;
+  font-family: 'Gilroy-500', sans-serif;
+  line-height: 2.8rem;
+}
+
+@mixin text {
+  font-size: 1.8rem;
+  font-family: 'Gilroy-400', sans-serif;
+  line-height: 3rem;
+}
+
+@mixin text-bold {
+  font-family: 'Gilroy-700', sans-serif;
+}
+
+@mixin text-black {
+  font-family: 'Gilroy-500', sans-serif;
+  line-height: 2.8rem;
+}
+
+@mixin text-small {
+  font-size: 1.4rem;
+  font-family: 'Gilroy-500', sans-serif;
+  line-height: 2.6rem;
+}
+
+@mixin text-small-bold {
+  font-size: 1.4rem;
+  font-family: 'Gilroy-700', sans-serif;
+  line-height: 2.6rem;
+}
+
+@mixin text-trigger {
+  font-size: 1.4rem;
+  font-family: 'Gilroy-400', sans-serif;
+  line-height: 2.6rem;
+}
+
+@mixin text-card-picture {
+  font-size: 1.1rem;
+  font-family: 'Gilroy-500', sans-serif;
+  line-height: 3rem;
+}
+
+@mixin text-card-title {
+  font-size: 2rem;
+  font-family: 'Gilroy-900', sans-serif;
+  line-height: 3rem;
+}
+
+@mixin text-card-btn {
+  font-size: 1.8rem;
+  font-family: 'Gilroy-700', sans-serif;
+  line-height: 2.6rem;
+  letter-spacing: 0.9;
+}
+
+@mixin title-question {
+  font-size: 3.6rem;
+  font-family: 'Gilroy-900', sans-serif;
+  line-height: 4.6rem;
+}

@@ -1,0 +1,61 @@
+header.header
+  .container
+    .header__inner
+      .header-logo
+        img.header-logo__img(src="images/icons/logo.png" alt="")
+        .header-logo__content
+          .header-logo__title Аренда автомобилей
+            br
+            | с выкупом №1 на Юге России
+          .header-logo__text Выгодные и честные условия
+
+      .header-info
+        .header-info__wrapper
+          .header-info__block
+            img.header-info__icon(src="images/icons/map.svg" alt="")
+            .header-info__content
+              .header-info__text Ставрополь ул. Доваторцев, 21
+              a.header-info__trigger.link(href="#") Выбрать город
+        .header-info__wrapper
+          .header-info__block
+            img.header-info__icon(src="images/icons/phone.svg" alt="")
+            .header-info__content
+              .header-info__text.header-info__phone 8 (962) 495-55-54
+              a.header-info__trigger.link(href="#") Заказать звонок
+
+      .header-mobile
+        a.header-mobile__link(href="#")
+          img.header-info__icon(src="images/icons/phone.svg" alt="")
+        a.header-mobile__link(href="#")
+          img.header-info__icon(src="images/icons/user.svg" alt="")
+        button.header-mobile__burger(data-mobile-trigger)
+          svg(width="30" height="2" fill="none" xmlns="http://www.w3.org/2000/svg")
+            path(stroke="#0088CF" stroke-width="2" d="M0 1h30")
+          svg(width="30" height="2" fill="none" xmlns="http://www.w3.org/2000/svg")
+            path(stroke="#0088CF" stroke-width="2" d="M0 1h30")
+          svg(width="30" height="2" fill="none" xmlns="http://www.w3.org/2000/svg")
+            path(stroke="#0088CF" stroke-width="2" d="M0 1h30")
+
+.navigation
+  .container
+    ul.navigation__list
+      li.navigation__item
+        a.navigation__link(href="#") Каталог автомобилей
+        img.navigation__icon(src="images/icons/Arrow.svg" alt="")
+      li.navigation__item
+        a.navigation__link(href="#") Варианты покупки
+        img.navigation__icon(src="images/icons/Arrow.svg" alt="")
+      li.navigation__item
+        a.navigation__link(href="#") Дубликаты госномеров
+      li.navigation__item
+        a.navigation__link(href="#") Истории выкупа
+      li.navigation__item
+        a.navigation__link(href="#") О компании
+        img.navigation__icon(src="images/icons/Arrow.svg" alt="")
+      li.navigation__item
+        a.navigation__link(href="#") Контакты
+      li.navigation__line
+      li.navigation__item
+        a.navigation__link(href="#")
+          img(src="images/icons/user.svg" alt="")
+          | Личный кабинет

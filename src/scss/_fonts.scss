@@ -1,0 +1,62 @@
+@font-face {
+  font-weight: var(--fw-300);
+  font-display: swap;
+  font-family: 'Gilroy-300';
+  font-style: normal;
+  src: url(../resources/fonts/Gilroy/Gilroy-Thin-300.woff2),
+    url(../resources/fonts/Gilroy/Gilroy-Thin-300.woff);
+}
+
+@font-face {
+  font-weight: var(--fw-400);
+  font-display: swap;
+  font-family: 'Gilroy-400';
+  font-style: normal;
+  src: url(../resources/fonts/Gilroy/Gilroy-Regular-400.woff2),
+    url(../resources/fonts/Gilroy/Gilroy-Regular-400.woff);
+}
+
+@font-face {
+  font-weight: var(--fw-500);
+  font-display: swap;
+  font-family: 'Gilroy-500';
+  font-style: normal;
+  src: url(../resources/fonts/Gilroy/Gilroy-Medium-500.woff2),
+    url(../resources/fonts/Gilroy/Gilroy-Medium-500.woff);
+}
+
+@font-face {
+  font-weight: var(--fw-600);
+  font-display: swap;
+  font-family: 'Gilroy-600';
+  font-style: normal;
+  src: url(../resources/fonts/Gilroy/Gilroy-Semibold-600.woff2),
+    url(../resources/fonts/Gilroy/Gilroy-Semibold-600.woff);
+}
+
+@font-face {
+  font-weight: var(--fw-700);
+  font-display: swap;
+  font-family: 'Gilroy-700';
+  font-style: normal;
+  src: url(../resources/fonts/Gilroy/Gilroy-Bold-700.woff2),
+    url(../resources/fonts/Gilroy/Gilroy-Bold-700.woff);
+}
+
+@font-face {
+  font-weight: var(--fw-800);
+  font-display: swap;
+  font-family: 'Gilroy-800';
+  font-style: normal;
+  src: url(../resources/fonts/Gilroy/Gilroy-Extrabold-800.woff2),
+    url(../resources/fonts/Gilroy/Gilroy-Extrabold-800.woff);
+}
+
+@font-face {
+  font-weight: var(--fw-900);
+  font-display: swap;
+  font-family: 'Gilroy-900';
+  font-style: normal;
+  src: url(../resources/fonts/Gilroy/Gilroy-Heavy-900.woff2),
+    url(../resources/fonts/Gilroy/Gilroy-Heavy-900.woff);
+}

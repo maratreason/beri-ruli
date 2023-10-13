@@ -1,0 +1,367 @@
+extends pug/base.pug
+
+append content
+  include pug/includes/header.pug
+
+  main.main(id="main")
+    section.section-empty
+    section.section-main
+      .container
+        .section-main__inner
+          .section-main__content
+            h1.section-main__title Аренда автомобиля с выкупом
+              br
+              | в Ставрополе от&nbsp;
+              span 530 ₽ в сутки
+            p.section-main__subtitle Удобнее и выгоднее, чем копить на машину
+            a.btn(href="#") Смотреть каталог авто
+          .section-main__car
+            img.section-main__image(src="images/main/main-car.png" alt="")
+            .section-main__box.box.box-gray
+            .section-main__box.box.box-blue
+
+    section.section-credit
+      .container
+        .section-credit__inner
+          h2.section-credit__title Без кредита
+          p.section-credit__text Оформив аренду авто с последующим выкупом, вы можете сразу же получить
+           | автомобиль в свое распоряжение, погашая его стоимость частями.
+          ul.section-credit__list
+            li.section-credit__item
+              h3.section-credit__item-title Нужен только паспорт и права
+              p.section-credit__item-text Не нужна справка с места работы и кредитная история
+            li.section-credit__item.is--active
+              h3.section-credit__item-title 0% комиссий
+              p.section-credit__item-text Выкуп авто в любой момент без комиссий
+            li.section-credit__item
+              h3.section-credit__item-title Регулируйте сумму выплат
+              p.section-credit__item-text Сами выбираете сумму для выплат от 18 000 тысяч в месяц
+
+    section.section-suitable.section-gray
+      .container
+        .section-suitable__inner
+          h2.section-suitable__title Мы подходим вам, если:
+          ul.section-suitable__list
+            li.section-suitable__item
+              img.section-suitable__icon(src="images/icons/checked.svg" alt="")
+              p.section-suitable__text Вы хотите приобрести авто уже сегодня
+            li.section-suitable__item
+              img.section-suitable__icon(src="images/icons/checked.svg" alt="")
+              p.section-suitable__text Вам не одобряют кредит в банке
+            li.section-suitable__item
+              img.section-suitable__icon(src="images/icons/checked.svg" alt="")
+              p.section-suitable__text Вы хотите экономить на ежемесячном платеже за свой автомобиль
+            li.section-suitable__item
+              img.section-suitable__icon(src="images/icons/checked.svg" alt="")
+              p.section-suitable__text Вам нужно приобрести несколько автомобилей на выгодных условиях
+            li.section-suitable__item
+              img.section-suitable__icon(src="images/icons/checked.svg" alt="")
+              p.section-suitable__text Хотите купить авто под такси
+
+    section.section.section-advantages
+      .container
+        .section-advantages__inner
+          h2.section-advantages__title Выкупать автомобиль с нами&nbsp;
+            span удобно, быстро и выгоднее&nbsp;
+            | чем в банке
+          ul.section-advantages__list
+            li.section-advantages__item
+              img.section-advantages__image(src="images/icons/checked.svg" alt="")
+              p.section-advantages__text
+                span 95% наших клиентов&nbsp;
+                | выкупают автомобиль
+            li.section-advantages__item
+              img.section-advantages__image(src="images/icons/checked.svg" alt="")
+              p.section-advantages__text
+                span 11 месяцев&nbsp;
+                | среднее время выкупа  в «Бери Рули»
+
+          ul.section-advantages__benefit-list.benefit
+            li.benefit-item
+              img.benefit-image(src="images/icons/advantages/1.svg" alt="")
+              .benefit-content
+                h3.benefit-title Нет фиксированной суммы взноса
+                p.benefit-text Чтобы быстрее выкупить автомобиль — просто напишите об этом менеджеру
+            li.benefit-item
+              img.benefit-image(src="images/icons/advantages/2.svg" alt="")
+              .benefit-content
+                h3.benefit-title Возвращаем деньги
+                p.benefit-text За не выкупленный автомобиль
+            li.benefit-item
+              img.benefit-image(src="images/icons/advantages/3.svg" alt="")
+              .benefit-content
+                h3.benefit-title Сами выбираете сумму для выплат
+                p.benefit-text От 18 000 тысяч в месяц
+            li.benefit-item
+              img.benefit-image(src="images/icons/advantages/4.svg" alt="")
+              .benefit-content
+                h3.benefit-title 10 дней отсрочка платежа
+                p.benefit-text Успеете поправить свои дела и внести платеж
+            li.benefit-item
+              img.benefit-image(src="images/icons/advantages/5.svg" alt="")
+              .benefit-content
+                h3.benefit-title Дарим страховку ОСАГО на один год
+            li.benefit-item
+              img.benefit-image(src="images/icons/advantages/6.svg" alt="")
+              .benefit-content
+                h3.benefit-title Скидка 20% на выкуп
+                p.benefit-text Всех последующих автомобилей
+
+    section.section-decor
+      .container
+        .section-decor__inner
+          h2.section-decor__title Для офомления понадобятся только:
+          ul.section-decor__list
+            li.section-decor__item
+              img.section-decor__image(src="images/icons/decor/1.svg" alt="")
+              .section-decor__item-wrapper
+                p.section-decor__text Права
+            li.section-decor__item
+              img.section-decor__image(src="images/icons/decor/2.svg" alt="")
+              .section-decor__item-wrapper
+                p.section-decor__text Паспорт
+            li.section-decor__item
+              img.section-decor__image(src="images/icons/decor/3.svg" alt="")
+              .section-decor__item-wrapper
+                p.section-decor__text Первый взнос
+
+    section.section-cards__old.section-cards
+      .container
+        .section-cards__inner
+          .section-cards__header
+            h2.section-cards__title Каталог автомобилей с пробегом
+            a.section-cards__btn.btn(href="#") Смотреть весь каталог
+          ul.section-cards__list.swiper(data-section-cards-slider)
+            .swiper-wrapper
+              li.section-cards__item.swiper-slide
+                .card
+                  .card-header
+                    img.card-header__image(src="images/main/car-1.jpg" alt="")
+                    ul.card-header__yellow-list
+                      li.card-header__yellow-item VIN-номера проверены
+                      li.card-header__yellow-item VIN-номера проверены
+                  .card-content
+                    a.card-content__link(href="#") Без пробега
+                    h3.card-content__title Ваз (Lada) Гранта седан Comfort 8 КЛ
+                    p.card-content__year Год выпуска 2021
+                    ul.card-content__info
+                      li.card-content__item
+                        .card-content__item-key Аренда с выкупом
+                        .card-content__item-value 1 300 руб/сутки
+                      li.card-content__item
+                        .card-content__item-key Рассрочка
+                        .card-content__item-value 1 200 руб/сутки
+                      li.card-content__item
+                        .card-content__item-key Наличные
+                        .card-content__item-value 1 100 руб/сутки
+                  a.card-btn.btn--blue(href="#") Полные характеристики
+              li.section-cards__item.swiper-slide
+                .card
+                  .card-header
+                    img.card-header__image(src="images/main/car-2.jpg" alt="")
+                    ul.card-header__yellow-list
+                      li.card-header__yellow-item
+                      li.card-header__yellow-item VIN-номера проверены
+                    ul.card-header__blue-list
+                      li.card-header__blue-item Скоро в продаже
+                  .card-content
+                    a.card-content__link(href="#") Без пробега
+                    h3.card-content__title Ваз (Lada) Гранта седан Comfort 16 КЛ
+                    p.card-content__year Год выпуска 2021
+                    ul.card-content__info
+                      li.card-content__item
+                        .card-content__item-key Аренда с выкупом
+                        .card-content__item-value 1 300 руб/сутки
+                      li.card-content__item
+                        .card-content__item-key Рассрочка
+                        .card-content__item-value 1 200 руб/сутки
+                      li.card-content__item
+                        .card-content__item-key Наличные
+                        .card-content__item-value 1 100 руб/сутки
+                  a.card-btn.btn--grey(href="#") Полные характеристики
+              li.section-cards__item.swiper-slide
+                .card
+                  .card-header
+                    img.card-header__image(src="images/main/car-3.jpg" alt="")
+                    ul.card-header__yellow-list
+                      li.card-header__yellow-item VIN-номера проверены
+                      li.card-header__yellow-item VIN-номера проверены
+                  .card-content
+                    a.card-content__link(href="#") Без пробега
+                    h3.card-content__title Ваз (Lada) Гранта седан Comfort 16 КЛ
+                    p.card-content__year Год выпуска 2021
+                    ul.card-content__info
+                      li.card-content__item
+                        .card-content__item-key Аренда с выкупом
+                        .card-content__item-value 1 300 руб/сутки
+                      li.card-content__item
+                        .card-content__item-key Рассрочка
+                        .card-content__item-value 1 200 руб/сутки
+                      li.card-content__item
+                        .card-content__item-key Наличные
+                        .card-content__item-value 1 100 руб/сутки
+                  a.card-btn(href="#") Полные характеристики
+            .section-cards__dots.dots.swiper-pagination(data-section-cards-dots)
+
+    section.section-steps.section-gray
+      .container
+        .section-steps__inner
+          h2.section-steps__title Получить автомобиль легко
+            br
+            span всего 4 шага и 30 минут времени
+          p.section-steps__subtitle Срок выкупа — от 3 месяцев до 2 лет
+          ul.section-steps__list
+            li.section-steps__item
+              h3.section-steps__item-title 1. Шаг
+              p.section-steps__item-text
+                span Выбирайте&nbsp;
+                | автомобиль на сайте или сразу приезжайте в наш офис. Уточнить время можно по телефону
+              p.section-steps__item-phone 8 800 456
+            li.section-steps__item
+              h3.section-steps__item-title 2. Шаг
+              p.section-steps__item-text
+                span Вместе&nbsp;
+                | рассчитаем первый взнос и удобный ежемесячный платеж. Сумму платежа потом можно изменить.&nbsp;
+                | Первый взнос можно внести сразу или в рассрочку в течение 10 дней
+            li.section-steps__item
+              h3.section-steps__item-title 3. Шаг
+              p.section-steps__item-text
+                span Заключаем&nbsp;
+                | договор и создаем для вас личный кабинет на сайте, где будет отражаться вся история взносов
+            li.section-steps__item
+              h3.section-steps__item-title 4. Шаг
+              p.section-steps__item-text
+                span Передаем&nbsp;
+                | вам ключи от автомобиля. У вас есть 24 часа на тест-драйв&nbsp;
+                | — чтобы убедиться, что именно этот автомобиль вам подходит
+          a.section-steps__btn.btn(href="#") Заказать звонок
+
+    section.section-cards__new.section-cards
+      .container
+        .section-cards__inner
+          .section-cards__header
+            h2.section-cards__title Каталог автомобилей без пробега
+            a.section-cards__btn.btn(href="#") Смотреть весь каталог
+          ul.section-cards__list.swiper(data-section-cards-slider-2)
+            .swiper-wrapper
+              li.section-cards__item.swiper-slide
+                .card
+                  .card-header
+                    img.card-header__image(src="images/main/car-1.jpg" alt="")
+                    ul.card-header__yellow-list
+                      li.card-header__yellow-item VIN-номера проверены
+                      li.card-header__yellow-item VIN-номера проверены
+                  .card-content
+                    a.card-content__link(href="#") Без пробега
+                    h3.card-content__title Ваз (Lada) Гранта седан Comfort 16 КЛ
+                    p.card-content__year Год выпуска 2021
+                    ul.card-content__info
+                      li.card-content__item
+                        .card-content__item-key Аренда с выкупом
+                        .card-content__item-value 1 300 руб/сутки
+                      li.card-content__item
+                        .card-content__item-key Рассрочка
+                        .card-content__item-value 1 200 руб/сутки
+                      li.card-content__item
+                        .card-content__item-key Наличные
+                        .card-content__item-value 1 100 руб/сутки
+                  a.card-btn.btn--blue(href="#") Полные характеристики
+              li.section-cards__item.swiper-slide
+                .card
+                  .card-header
+                    img.card-header__image(src="images/main/car-1.jpg" alt="")
+                    ul.card-header__yellow-list
+                      li.card-header__yellow-item
+                      li.card-header__yellow-item VIN-номера проверены
+                    ul.card-header__blue-list
+                      li.card-header__blue-item Скоро в продаже
+                  .card-content
+                    a.card-content__link(href="#") Без пробега
+                    h3.card-content__title Ваз (Lada) Гранта седан Comfort 16 КЛ
+                    p.card-content__year Год выпуска 2021
+                    ul.card-content__info
+                      li.card-content__item
+                        .card-content__item-key Аренда с выкупом
+                        .card-content__item-value 1 300 руб/сутки
+                      li.card-content__item
+                        .card-content__item-key Рассрочка
+                        .card-content__item-value 1 200 руб/сутки
+                      li.card-content__item
+                        .card-content__item-key Наличные
+                        .card-content__item-value 1 100 руб/сутки
+                  a.card-btn.btn--grey(href="#") Полные характеристики
+              li.section-cards__item.swiper-slide
+                .card
+                  .card-header
+                    img.card-header__image(src="images/main/car-1.jpg" alt="")
+                    ul.card-header__yellow-list
+                      li.card-header__yellow-item VIN-номера проверены
+                      li.card-header__yellow-item VIN-номера проверены
+                  .card-content
+                    a.card-content__link(href="#") Без пробега
+                    h3.card-content__title Ваз (Lada) Гранта седан Comfort 16 КЛ
+                    p.card-content__year Год выпуска 2021
+                    ul.card-content__info
+                      li.card-content__item
+                        .card-content__item-key Аренда с выкупом
+                        .card-content__item-value 1 300 руб/сутки
+                      li.card-content__item
+                        .card-content__item-key Рассрочка
+                        .card-content__item-value 1 200 руб/сутки
+                      li.card-content__item
+                        .card-content__item-key Наличные
+                        .card-content__item-value 1 100 руб/сутки
+                  a.card-btn(href="#") Полные характеристики
+            .section-cards__dots.dots.swiper-pagination(data-section-cards-dots-2)
+
+    section.section-purchase
+      .container
+        .section-purchase__inner
+          h2.section-purchase__title
+            span Аренда с выкупом&nbsp;
+            | автомобиля с нами — это:
+          ul.section-advantages__list
+            li.section-advantages__item
+              img.section-advantages__image(src="images/icons/checked.svg" alt="")
+              p.section-advantages__text Всегда не менее&nbsp;
+                span 25 автобомобилей на ваш выбор
+            li.section-advantages__item
+              img.section-advantages__image(src="images/icons/checked.svg" alt="")
+              p.section-advantages__text
+                span Официальные договор&nbsp;
+                | и прозрачные условия
+            li.section-advantages__item
+              img.section-advantages__image(src="images/icons/checked.svg" alt="")
+              p.section-advantages__text
+                span Доступ в личный кабинет&nbsp;
+                | с историей платежей и прогрессом выплат
+            li.section-advantages__item
+              img.section-advantages__image(src="images/icons/checked.svg" alt="")
+              p.section-advantages__text
+                span Персональный менеджер&nbsp;
+                | , который всегда поможет
+
+    section.section-question.section-gray
+      .container
+        .section-question__inner
+          .section-question__content
+            h2.section-question__title Остались вопросы?
+              br
+              span Свяжитесь с нами
+            p.section-question__text Если вы столкнулись с трудностями при&nbsp;
+              | работе с Бери Рули, у Вас есть какие-то замечания или предложения — позвоните.
+              br
+              span Прием звонков с 09:00 до 18:00
+            p.section-question__phone +7 (962) 495 55 54
+          form.section-question__form.form
+            input.form__input.input(type="text" placeholder="Ваше имя")
+            input.form__input.input(type="text" placeholder="Номер телефона")
+            input.form__input.input(type="text" placeholder="Ваш вопрос")
+            .section-question__submit
+              .form__checkbox.checkbox
+                input.checkbox__input(type="checkbox" id="question-check")
+                label.checkbox__label(for="question-check") Согласие на обработку персональных данных
+
+              button.btn.btn-sm(type="submit") Задать вопрос
+
+  include pug/includes/footer.pug

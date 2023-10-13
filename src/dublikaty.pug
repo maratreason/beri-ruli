@@ -1,0 +1,63 @@
+extends pug/base.pug
+
+append content
+  include pug/includes/header.pug
+
+  main.main(id="main")
+
+    .breadcrumbs-wrapper
+      .container
+        +breadcrumbs("Главная", "Личный кабинет")
+
+    section.section-banner.banner-second
+      .container
+        .banner-second__inner
+          .banner-second__block
+            .banner-second__btn Спецпредложение
+            img.banner-second__image(src="images/icons/hand-shake-white.svg" alt="")
+          .banner-second__text
+            h2.banner-second__title Приведи друга и получите вместе получите скидку!
+            p.banner-second__subtitle.
+              Если по  ващей рекомендации ваш друг/знакомый заключает договор в компании “Бери Рули” Он получает 5 000 рублей от оценочной стоимости своего автомобиля! После того как он внесет второй  платеж, 5 000 тысяч рублей отнимется о стоимости автомобиля!
+          .banner-second__block
+            .select(data-select)
+              .select__current
+                span Свернуть
+                .btn-dropdown__icon
+                  svg(width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg" data-select-icon)
+                    path(id="Arrow" fill-rule="evenodd" clip-rule="evenodd" d="M6.08607 7L0 1.5L1.65984 0L6.08607 4L10.5123 0L12.1721 1.6L6.08607 7Z" fill="#fff")
+              ul.select__list
+                li.select__item RAL 7004
+                li.select__item RAL 7005
+                li.select__item RAL 7006
+
+    section.section.section-agreement
+      .container
+        .section-agreement__inner
+          h2.section-agreement__title Данные договора 124315
+          
+
+    section.section.section-question.section-gray
+      .container
+        .section-question__inner
+          .section-question__content
+            h2.section-question__title Остались вопросы?
+              br
+              span Свяжитесь с нами
+            p.section-question__text Если вы столкнулись с трудностями при&nbsp;
+              | работе с Бери Рули, у Вас есть какие-то замечания или предложения — позвоните.
+              br
+              span Прием звонков с 09:00 до 18:00
+            p.section-question__phone +7 (962) 495 55 54
+          form.section-question__form.form
+            input.form__input.input(type="text" placeholder="Ваше имя")
+            input.form__input.input(type="text" placeholder="Номер телефона")
+            input.form__input.input(type="text" placeholder="Ваш вопрос")
+            .section-question__submit
+              .form__checkbox.checkbox
+                input.checkbox__input(type="checkbox" id="question-check")
+                label.checkbox__label(for="question-check") Согласие на обработку персональных данных
+
+              button.btn.btn-sm(type="submit") Задать вопрос
+
+  include pug/includes/footer.pug
