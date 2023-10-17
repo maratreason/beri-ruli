@@ -1,0 +1,42 @@
+extends pug/base.pug
+
+append content
+  include pug/includes/header.pug
+
+  main.main(id="main")
+    section.section-empty
+    section.section.section-login
+      .container
+        .section-login__inner
+          .auth-form
+            h1.auth-form__title Вход в личный кабинет
+            p.auth-form__subtitle Доступ в личный кабинет с историей платежей и прогрессом выплат
+            form.auth-form__form
+              input.auth-form__input.input(type="text" placeholder="Введите номер договора")
+              input.auth-form__input.input(type="text" placeholder="Введите клиентский код")
+              button.auth-form__btn.btn(type="submit") Войти
+
+    section.section.section-question.section-gray
+      .container
+        .section-question__inner
+          .section-question__content
+            h2.section-question__title Остались вопросы?
+              br
+              span Свяжитесь с нами
+            p.section-question__text Если вы столкнулись с трудностями при&nbsp;
+              | работе с Бери Рули, у Вас есть какие-то замечания или предложения — позвоните.
+              br
+              span Прием звонков с 09:00 до 18:00
+            p.section-question__phone +7 (962) 495 55 54
+          form.section-question__form.form
+            input.form__input.input(type="text" placeholder="Ваше имя")
+            input.form__input.input(type="text" placeholder="Номер телефона")
+            input.form__input.input(type="text" placeholder="Ваш вопрос")
+            .section-question__submit
+              .form__checkbox.checkbox
+                input.checkbox__input(type="checkbox" id="question-check")
+                label.checkbox__label(for="question-check") Согласие на обработку персональных данных
+
+              button.btn.btn-sm(type="submit") Задать вопрос
+
+  include pug/includes/footer.pug

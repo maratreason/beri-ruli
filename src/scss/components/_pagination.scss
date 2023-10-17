@@ -1,31 +1,62 @@
 .pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__pages {
+    display: flex;
+    gap: 1.2rem;
+    justify-content: center;
+    width: 100%;
+    color: rgba(#212864, 0.6);
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+
+    span {
+      font-weight: 400;
+    }
+  }
+
+  &__page {
+    @include text-bold;
+
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius-5);
+    cursor: pointer;
+    transition: var(--transition-1);
 
-    &__pages {
-        display: flex;
-        color: rgba(#212864, 0.6);
-        font-size: 1.8rem;
-        line-height: 2.2rem;
+    &-arrow {
+      background: var(--blue);
+      border-color: var(--blue);
+      transform: rotate(90deg);
 
-        span {
-            font-weight: 400;
-        }
+      &:last-child {
+        transform: rotate(-90deg);
+      }
     }
 
-    &__page {
-        &--active {
-            color: var(--blue-dark);
-            font-weight: 700;
-            cursor: pointer;
-        }
+    &.is--active {
+      color: var(--blue);
+      border: 1px solid var(--blue);
+      cursor: pointer;
     }
 
-    &__line {
-        width: 100%;
-        max-width: 59rem;
-        height: 1px;
-        background: rgba(#212864, 0.4);
+    &:hover {
+      color: var(--white);
+      background: var(--blue);
+      border-color: var(--blue);
     }
+  }
+
+  &__line {
+    width: 100%;
+    max-width: 59rem;
+    height: 1px;
+    background: rgba(#212864, 0.4);
+  }
 }

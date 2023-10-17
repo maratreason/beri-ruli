@@ -3,29 +3,30 @@
   display: block;
   width: 100%;
   color: var(--black);
+  font-size: 1.4rem;
   border: none;
 
   &--blue {
     background: var(--blue);
   }
 
-  &--validated {
-    color: var(--black);
-    border-bottom: 0.2rem solid var(--green);
-  }
-
-  &--narrow {
-    height: 4.4rem;
-    padding: 1.2rem 0.8rem;
-  }
-
   &-sm {
-    height: 4.6rem;
+    width: 10rem;
+  }
+
+  &-md {
+    width: 21.4rem;
   }
 
   &::placeholder {
     color: var(--black);
     font-size: 1.5rem;
+  }
+
+  &.select-bordered {
+    padding: 1.5rem 1rem;
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius-5);
   }
 
   .select__current {
@@ -54,23 +55,47 @@
 
   .select__list {
     position: absolute;
-    top: 6.5rem;
+    top: 7rem;
     left: 0;
     z-index: 5;
     display: none;
     width: 100%;
     overflow: hidden;
     color: var(--black);
+    line-height: 1.6rem;
     background: var(--white);
-    border-radius: 0.2rem;
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius-3);
 
     &.show {
       display: block;
     }
   }
 
+  .select__list-scrolled {
+    height: 15rem;
+    padding: 0 0.3rem 0 0;
+    overflow-y: auto;
+    background: transparent;
+
+    &::-webkit-scrollbar {
+      width: 0.2rem;
+    }
+    
+    &::-webkit-scrollbar-track {
+      background: var(--card-border);
+    }
+    
+    &::-webkit-scrollbar-thumb {
+      height: 3rem; 
+      background-color: var(--blue);
+      border-radius: 0.3rem;
+      outline: 0.2rem solid var(--blue);
+    }
+  }
+
   .select__item {
-    padding: 1.8rem 1.2rem;
+    padding: 1.5rem 1rem;
     cursor: pointer;
 
     &:hover {
@@ -83,51 +108,6 @@
 
     &:not(:last-child) {
       border-bottom: 1px solid #eee;
-    }
-  }
-}
-
-.filter {
-  position: relative;
-  font-size: 1.2rem;
-  font-family: ProximaNova-Semibold, sans-serif;
-  letter-spacing: 0.048rem;
-  text-transform: uppercase;
-
-  &-text {
-    display: flex;
-    gap: 0.4rem;
-    align-items: center;
-    cursor: pointer;
-  }
-
-  &-arrow {
-    position: relative;
-    top: -0.1rem;
-    transition: var(--transition-1);
-  }
-
-  &-list {
-    position: absolute;
-    top: 2rem;
-    z-index: 2;
-    display: none;
-    min-width: 20rem;
-    overflow: hidden;
-    background: var(--white);
-    border-radius: 0.2rem;
-
-    &.is--active {
-      display: block;
-    }
-  }
-
-  &-item {
-    padding: 1rem;
-    cursor: pointer;
-
-    &:hover {
-      background: var(--blue);
     }
   }
 }

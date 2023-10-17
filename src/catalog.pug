@@ -1,0 +1,339 @@
+extends pug/base.pug
+
+append content
+  include pug/includes/header.pug
+
+  main.main(id="main")
+    section.section-empty
+    .breadcrumbs-wrapper
+      .container
+        +breadcrumbs("Главная", "Каталог авто")
+
+    section.section-banner
+      .container
+        .section-banner__inner
+          img.section-banner__image(src="images/main/car-banner.jpg" alt="")
+          .section-banner__text
+            h2.section-banner__title Каталог автомобилей в наличии
+            p.section-banner__subtitle.
+              Автомобиль в собственности меньше, чем за год 11 месяцев средний срок выкупа в «Бери Рули»
+
+    section.section.section-catalog
+      .container
+        .section-catalog__inner
+          h2.section-catalog__title Фильтр
+          ul.section-catalog__filters-list
+            li.section-catalog__filters-item
+              .select.select-md.select-bordered(data-select)
+                .select__current
+                  span Вариант покупки
+                  .btn-dropdown__icon
+                    svg(width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg" data-select-icon)
+                      path(id="Arrow" fill-rule="evenodd" clip-rule="evenodd" d="M6.08607 7L0 1.5L1.65984 0L6.08607 4L10.5123 0L12.1721 1.6L6.08607 7Z" fill="#242321")
+                ul.select__list
+                  li.select__item Наличные
+                  li.select__item Безналичный расчет
+            li.section-catalog__filters-item
+              .select.select-md.select-bordered(data-select)
+                .select__current
+                  span Состояние автомобиля
+                  .btn-dropdown__icon
+                    svg(width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg" data-select-icon)
+                      path(id="Arrow" fill-rule="evenodd" clip-rule="evenodd" d="M6.08607 7L0 1.5L1.65984 0L6.08607 4L10.5123 0L12.1721 1.6L6.08607 7Z" fill="#242321")
+                ul.select__list
+                  li.select__item Новое
+                  li.select__item С пробегом 1 владелец
+                  li.select__item С пробегом 2 владельца
+            li.section-catalog__filters-item
+              .section-catalog__filters-block
+                .section-catalog__filters-label Год выпуска
+                .select.select-sm.select-bordered(data-select)
+                  .select__current
+                    span От
+                    .btn-dropdown__icon
+                      svg(width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg" data-select-icon)
+                        path(id="Arrow" fill-rule="evenodd" clip-rule="evenodd" d="M6.08607 7L0 1.5L1.65984 0L6.08607 4L10.5123 0L12.1721 1.6L6.08607 7Z" fill="#242321")
+                  ul.select__list.select__list-scrolled
+                    li.select__item 2000
+                    li.select__item 2001
+                    li.select__item 2002
+                    li.select__item 2003
+                    li.select__item 2004
+                    li.select__item 2005
+                    li.select__item 2006
+                    li.select__item 2007
+                    li.select__item 2008
+                    li.select__item 2009
+                    li.select__item 2010
+                    li.select__item 2011
+                    li.select__item 2012
+                    li.select__item 2013
+                    li.select__item 2014
+                    li.select__item 2015
+                    li.select__item 2016
+                    li.select__item 2017
+                    li.select__item 2018
+                    li.select__item 2019
+                    li.select__item 2020
+                    li.select__item 2021
+                    li.select__item 2022
+                    li.select__item 2023
+                .select.select-sm.select-bordered(data-select)
+                  .select__current
+                    span До
+                    .btn-dropdown__icon
+                      svg(width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg" data-select-icon)
+                        path(id="Arrow" fill-rule="evenodd" clip-rule="evenodd" d="M6.08607 7L0 1.5L1.65984 0L6.08607 4L10.5123 0L12.1721 1.6L6.08607 7Z" fill="#242321")
+                  ul.select__list.select__list-scrolled
+                    li.select__item 2005
+                    li.select__item 2006
+                    li.select__item 2007
+                    li.select__item 2008
+                    li.select__item 2009
+                    li.select__item 2010
+                    li.select__item 2011
+                    li.select__item 2012
+                    li.select__item 2013
+                    li.select__item 2014
+                    li.select__item 2015
+                    li.select__item 2016
+                    li.select__item 2017
+                    li.select__item 2018
+                    li.select__item 2019
+                    li.select__item 2020
+                    li.select__item 2021
+                    li.select__item 2022
+                    li.select__item 2023
+            li.section-catalog__filters-item
+              .checkbox-rounded(data-checkbox-2)
+                span.section-catalog__filters-text.checkbox-rounded__label-text Механика
+                label.checkbox-rounded__label
+                  span.action
+                    input.checkbox-rounded__input(type="checkbox" checked)
+                    i.checkbox-rounded__round
+                span.section-catalog__filters-text.checkbox-rounded__label-text Автомат
+
+            li.section-catalog__filters-item
+              button.btn.btn-sm(type="button") Очистить фильтр
+
+          ul.section-catalog__filters-chips
+            li.section-catalog__filters-chip
+              .chip
+                .chip__text Наличные
+                .chip__icon &times;
+            li.section-catalog__filters-chip
+              .chip
+                .chip__text С пробегом 1 владелец
+                .chip__icon &times;
+            li.section-catalog__filters-chip
+              .chip
+                .chip__text от 5
+                .chip__icon &times;
+
+    section.section-cards
+      .container
+        .section-cards__inner
+          ul.section-cards__list.swiper(data-section-cards-slider)
+            .swiper-wrapper
+              li.section-cards__item.swiper-slide
+                .card
+                  .card-header
+                    img.card-header__image(src="images/main/car-1.jpg" alt="")
+                    ul.card-header__yellow-list
+                      li.card-header__yellow-item VIN-номера проверены
+                      li.card-header__yellow-item VIN-номера проверены
+                  .card-content
+                    a.card-content__link(href="#") Без пробега
+                    h3.card-content__title Ваз (Lada) Гранта седан Comfort 8 КЛ
+                    p.card-content__year Год выпуска 2021
+                    ul.card-content__info
+                      li.card-content__item
+                        .card-content__item-key Аренда с выкупом
+                        .card-content__item-value 1 300 руб/сутки
+                      li.card-content__item
+                        .card-content__item-key Рассрочка
+                        .card-content__item-value 1 200 руб/сутки
+                      li.card-content__item
+                        .card-content__item-key Наличные
+                        .card-content__item-value 1 100 руб/сутки
+                  a.card-btn.btn--blue(href="#") Полные характеристики
+              li.section-cards__item.swiper-slide
+                .card
+                  .card-header
+                    img.card-header__image(src="images/main/car-2.jpg" alt="")
+                    ul.card-header__yellow-list
+                      li.card-header__yellow-item
+                      li.card-header__yellow-item VIN-номера проверены
+                    ul.card-header__blue-list
+                      li.card-header__blue-item Скоро в продаже
+                  .card-content
+                    a.card-content__link(href="#") Без пробега
+                    h3.card-content__title Ваз (Lada) Гранта седан Comfort 16 КЛ
+                    p.card-content__year Год выпуска 2021
+                    ul.card-content__info
+                      li.card-content__item
+                        .card-content__item-key Аренда с выкупом
+                        .card-content__item-value 1 300 руб/сутки
+                      li.card-content__item
+                        .card-content__item-key Рассрочка
+                        .card-content__item-value 1 200 руб/сутки
+                      li.card-content__item
+                        .card-content__item-key Наличные
+                        .card-content__item-value 1 100 руб/сутки
+                  a.card-btn.btn--grey(href="#") Полные характеристики
+              li.section-cards__item.swiper-slide
+                .card
+                  .card-header
+                    img.card-header__image(src="images/main/car-3.jpg" alt="")
+                    ul.card-header__yellow-list
+                      li.card-header__yellow-item VIN-номера проверены
+                      li.card-header__yellow-item VIN-номера проверены
+                  .card-content
+                    a.card-content__link(href="#") Без пробега
+                    h3.card-content__title Ваз (Lada) Гранта седан Comfort 16 КЛ
+                    p.card-content__year Год выпуска 2021
+                    ul.card-content__info
+                      li.card-content__item
+                        .card-content__item-key Аренда с выкупом
+                        .card-content__item-value 1 300 руб/сутки
+                      li.card-content__item
+                        .card-content__item-key Рассрочка
+                        .card-content__item-value 1 200 руб/сутки
+                      li.card-content__item
+                        .card-content__item-key Наличные
+                        .card-content__item-value 1 100 руб/сутки
+                  a.card-btn(href="#") Полные характеристики
+            .section-cards__dots.dots.swiper-pagination(data-section-cards-dots)
+
+    section.section-decor
+      .container
+        .section-decor__inner
+          h2.section-decor__title Для офомления понадобятся только:
+          ul.section-decor__list
+            li.section-decor__item
+              img.section-decor__image(src="images/icons/decor/1.svg" alt="")
+              .section-decor__item-wrapper
+                p.section-decor__text Права
+            li.section-decor__item
+              img.section-decor__image(src="images/icons/decor/2.svg" alt="")
+              .section-decor__item-wrapper
+                p.section-decor__text Паспорт
+            li.section-decor__item
+              img.section-decor__image(src="images/icons/decor/3.svg" alt="")
+              .section-decor__item-wrapper
+                p.section-decor__text Первый взнос
+
+    section.section.section-question
+      .container
+        .section-question__inner.section-gray.section-desire
+          .section-question__content
+            h2.section-question__title
+              span Хотите автомобиль&nbsp;
+              |, которого нет в каталоге или он уже продан?
+
+            ul.section-desire__list
+              li.section-desire__item
+                span.section-desire__item-number 1
+                p.section-desire__item-text.
+                  Позвоните менеджеру — попробуем найти эту или похожую модель автомобиля специально для вас.
+              li.section-desire__item
+                span.section-desire__item-number 2
+                p.section-desire__item-text.
+                  Если не найдем сейчас — внесем вас в базу и сообщим, как только что-то похожее появится в продаже.
+
+          form.section-question__form.form
+            input.form__input.input(type="text" placeholder="Имя")
+            input.form__input.input(type="text" placeholder="Номер телефона")
+            input.form__input.input(type="text" placeholder="Марка автомобиля или другая информация")
+            .section-question__submit
+              .form__checkbox.checkbox
+                input.checkbox__input(type="checkbox" id="question-check-10")
+                label.checkbox__label(for="question-check-10") Согласие на обработку персональных данных
+              button.btn.btn-sm(type="submit") Задать вопрос
+
+    section.section-steps.section-gray
+      .container
+        .section-steps__inner
+          h2.section-steps__title Получить автомобиль легко
+            br
+            span всего 4 шага и 30 минут времени
+          p.section-steps__subtitle Срок выкупа — от 3 месяцев до 2 лет
+          ul.section-steps__list
+            li.section-steps__item
+              h3.section-steps__item-title 1. Шаг
+              p.section-steps__item-text
+                span Выбирайте&nbsp;
+                | автомобиль на сайте или сразу приезжайте в наш офис. Уточнить время можно по телефону
+              p.section-steps__item-phone 8 800 456
+            li.section-steps__item
+              h3.section-steps__item-title 2. Шаг
+              p.section-steps__item-text
+                span Вместе&nbsp;
+                | рассчитаем первый взнос и удобный ежемесячный платеж. Сумму платежа потом можно изменить.&nbsp;
+                | Первый взнос можно внести сразу или в рассрочку в течение 10 дней
+            li.section-steps__item
+              h3.section-steps__item-title 3. Шаг
+              p.section-steps__item-text
+                span Заключаем&nbsp;
+                | договор и создаем для вас личный кабинет на сайте, где будет отражаться вся история взносов
+            li.section-steps__item
+              h3.section-steps__item-title 4. Шаг
+              p.section-steps__item-text
+                span Передаем&nbsp;
+                | вам ключи от автомобиля. У вас есть 24 часа на тест-драйв&nbsp;
+                | — чтобы убедиться, что именно этот автомобиль вам подходит
+          a.section-steps__btn.btn(href="#") Заказать звонок
+
+    section.section.section-next
+      .container
+        .section-next__inner
+          .section-next__sign.section-next__sign--big ?
+          .section-next__sign.section-next__sign--middle ?
+          .section-next__sign.section-next__sign--small ?
+          h2.section-next__title А что потом?
+          ul.section-next__list
+            li.section-next__item
+              span Вносите&nbsp;
+              | регулярный платеж каждый месяц. Платеж включает сумму аренды.
+              | Сами выбираете сумму для выплат. В среднем это от 18 000 тысяч в месяц
+            li.section-next__item История платежей и напоминание о следующей оплате будут отражаться
+              | в личном кабинете прямо на сайте.&nbsp;
+              span 10 дней отсрочка платежа
+              |, если в этом месяце что-то пошло не так Успеете поправить свои дела и внести платеж
+            li.section-next__item
+              span После внесение последнего платежа&nbsp;
+              | переоформляем автомобиль на вас и отдаем полный пакет документов
+            li.section-next__item
+              span Если хотите выкупить автомобиль раньше срока&nbsp;
+              | — это можно сделать в любой день. Мы не берем никаких комиссий. Просто вносите остаток
+              | суммы, и мы передаем вам документы на машину.
+            li.section-next__item
+              span Персональный менеджер
+              |, который всегда поможет. Если попали в ДТП, нужна отсрочка платежа или есть вопрос
+            li.section-next__item
+              span Скидка 20%&nbsp;
+              | на выкуп всех последующих автомобилей
+
+    section.section.section-question.section-gray
+      .container
+        .section-question__inner
+          .section-question__content
+            h2.section-question__title Остались вопросы?
+              br
+              span Свяжитесь с нами
+            p.section-question__text Если вы столкнулись с трудностями при&nbsp;
+              | работе с Бери Рули, у Вас есть какие-то замечания или предложения — позвоните.
+              br
+              span Прием звонков с 09:00 до 18:00
+            p.section-question__phone +7 (962) 495 55 54
+          form.section-question__form.form
+            input.form__input.input(type="text" placeholder="Ваше имя")
+            input.form__input.input(type="text" placeholder="Номер телефона")
+            input.form__input.input(type="text" placeholder="Ваш вопрос")
+            .section-question__submit
+              .form__checkbox.checkbox
+                input.checkbox__input(type="checkbox" id="question-check")
+                label.checkbox__label(for="question-check") Согласие на обработку персональных данных
+              button.btn.btn-sm(type="submit") Задать вопрос
+
+  include pug/includes/footer.pug

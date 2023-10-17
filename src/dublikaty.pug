@@ -4,7 +4,7 @@ append content
   include pug/includes/header.pug
 
   main.main(id="main")
-
+    section.section-empty
     .breadcrumbs-wrapper
       .container
         +breadcrumbs("Главная", "Личный кабинет")
@@ -27,16 +27,142 @@ append content
                   svg(width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg" data-select-icon)
                     path(id="Arrow" fill-rule="evenodd" clip-rule="evenodd" d="M6.08607 7L0 1.5L1.65984 0L6.08607 4L10.5123 0L12.1721 1.6L6.08607 7Z" fill="#fff")
               ul.select__list
-                li.select__item RAL 7004
-                li.select__item RAL 7005
-                li.select__item RAL 7006
+                li.select__item Развернуть
+                li.select__item Список 2
 
     section.section.section-agreement
       .container
         .section-agreement__inner
-          h2.section-agreement__title Данные договора 124315
-          button.btn Письмо директору
-          
+          .section-agreement__block
+            h2.section-agreement__title Данные договора 124315
+            button.btn Письмо директору
+          p.section-agreement__text Здравствуйте, Анаит Эдиковна!
+          p.section-agreement__text Ваш менеджер: Алексей Владимирович
+
+          h3.section-agreement__subtitle Информация об автомобиле
+          .section-agreement__block
+            ul.section-agreement__list
+              li.section-agreement__item Номер:&nbsp;
+                b M4539EY129
+              li.section-agreement__item Марка:&nbsp;
+                b ВАЗ (LADA)
+              li.section-agreement__item Модель:&nbsp;
+                b Vesta CNG
+              li.section-agreement__item Пробег на момент заключения:&nbsp;
+                b 800 м
+            .section-agreement__info
+              ul.section-agreement__list
+                li.section-agreement__item Залог:&nbsp;
+                  b 25 000 рублей
+                li.section-agreement__item.section-agreement__item--bold Остаток к выкупу на 10.04 22:&nbsp;
+                  b 930 600 рублей
+                li.section-agreement__item Сумма на дату платежа:&nbsp;
+                  b 948 600 рублей
+            .section-agreement__qrcode
+              h4.section-agreement__qrtitle Платеж 45 000 руб/ мес
+              p.section-agreement__text Аренда 17 500
+              p.section-agreement__text Выкуп 17 500
+              .section-agreement__qr
+                img.section-agreement__qrimage(src="images/icons/qr-code.svg" alt="")
+                span.section-agreement__qrlink QR код для оплаты
+
+          .section-agreement__fines
+            h4.section-agreement__fines-title Штрафы ГБДД
+            p.section-agreement__fines-text Нет заригистрироаванных
+
+          .section-agreement__payment
+            h3.section-agreement__payment-title Платежные данные
+            .section-agreement__payment-inner
+              .section-agreement__payment-block
+                h4.section-agreement__payment-subtitle Общие данные
+                .section-agreement__payment-item
+                  p.section-agreement__payment-text Оценочная стоимость
+                  input.section-agreement__payment-input.input.input-sm.input-blue(type="text" placeholder="1 000 000")
+                .section-agreement__payment-item
+                  p.section-agreement__payment-text Общая задолженность
+                  input.section-agreement__payment-input.input.input-sm.input-blue(type="text" placeholder="0.00")
+                .section-agreement__payment-item
+                  p.section-agreement__payment-text Прочее
+                  input.section-agreement__payment-input.input.input-sm.input-blue(type="text" placeholder="0.00")
+              .section-agreement__payment-block
+                h4.section-agreement__payment-subtitle Прошлый период
+                .section-agreement__payment-item
+                  p.section-agreement__payment-text Задолженность по платежу
+                  input.section-agreement__payment-input.input.input-sm.input-blue(type="text" placeholder="0.00")
+                .section-agreement__payment-item
+                  p.section-agreement__payment-text Задолженность по аренде
+                  input.section-agreement__payment-input.input.input-sm.input-blue(type="text" placeholder="0.00")
+                .section-agreement__payment-item
+                  p.section-agreement__payment-text Задолженность по выкупу
+                  input.section-agreement__payment-input.input.input-sm.input-blue(type="text" placeholder="0.00")
+                .section-agreement__payment-item
+                  p.section-agreement__payment-text Пени
+                  input.section-agreement__payment-input.input.input-sm.input-blue(type="text" placeholder="0.00")
+              .section-agreement__payment-block
+                h4.section-agreement__payment-subtitle Текущий период
+                .section-agreement__payment-item
+                  p.section-agreement__payment-text Начислено
+                  input.section-agreement__payment-input.input.input-sm.input-blue(type="text" placeholder="1 000 000")
+                .section-agreement__payment-item
+                  p.section-agreement__payment-text Задолженность по аренде
+                  input.section-agreement__payment-input.input.input-sm.input-blue(type="text" placeholder="0.00")
+                .section-agreement__payment-item
+                  p.section-agreement__payment-text Задолженность по выкупу
+                  input.section-agreement__payment-input.input.input-sm.input-blue(type="text" placeholder="0.00")
+                .section-agreement__payment-item
+                  p.section-agreement__payment-text Пени
+                  input.section-agreement__payment-input.input.input-sm.input-blue(type="text" placeholder="0.00")
+
+          .section-agreement__table
+            h3.section-agreement__table-title Платежи по договору
+            table.table
+              thead.table__head
+                tr
+                  th Дата
+                  th Операция
+                  th Период оплаты с
+                  th Период оплаты до
+                  th Сумма оплаты
+                  th Сумма аренды
+                  th Сумма выкупа
+                  th Пени
+                  th Штрафы
+                  th Вид оплаты
+              tbody.table__body
+                tr
+                  td.table__body-title 15.09.21
+                  td.full-width Оплата аренды
+                  td 15.09.21
+                  td 15.10.94
+                  td 0
+                  td 0
+                  td 0
+                  td 0
+                  td 0
+                  td Плановый
+                tr
+                  td.table__body-title 15.09.21
+                  td.full-width Оплата аренды и не только
+                  td 15.09.21
+                  td 15.10.94
+                  td 0
+                  td 0
+                  td 0
+                  td 0
+                  td 0
+                  td Залог
+                tr
+                  td.table__body-title 15.09.23
+                  td.full-width Оплата аренды
+                  td 15.09.21
+                  td 15.10.94
+                  td 0
+                  td 0
+                  td 0
+                  td 0
+                  td 0
+                  td Залог
+
 
     section.section.section-question.section-gray
       .container
