@@ -11,6 +11,21 @@ body {
   color: var(--black);
   background: var(--white);
 
+  &::-webkit-scrollbar {
+    width: 0.3rem;
+  }
+  
+  &::-webkit-scrollbar-track {
+    background: var(--card-border);
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    height: 3rem; 
+    background-color: var(--blue);
+    border-radius: 0.3rem;
+    outline: 0.2rem solid var(--blue);
+  }
+
   @media screen and (max-width: 768px) {
     font-size: 1.4rem;
     line-height: 2rem;
@@ -25,7 +40,7 @@ body {
 }
 
 .section-empty {
-  margin-top: 7rem;
+  margin-top: 14rem;
 }
 
 span {
@@ -44,8 +59,16 @@ sup {
   text-decoration: underline;
 }
 
+.text-small {
+  @include text-small;
+}
+
 .text-bold {
   @include text-bold;
+}
+
+.text-blue {
+  color: var(--blue);
 }
 
 // используется в .section-advantages__list

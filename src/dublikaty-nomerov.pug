@@ -1,0 +1,88 @@
+extends pug/base.pug
+
+append content
+  include pug/includes/header.pug
+
+  main.main(id="main")
+    section.section-empty
+    .breadcrumbs-wrapper
+      .container
+        +breadcrumbs("Главная", "Дубликаты госномеров")
+
+    section.section-banner.banner-second
+      .container
+        .banner-second__inner
+          .banner-second__text
+            h2.banner-second__title Дубликаты госномеров
+            p.banner-second__subtitle Изготовление дубликатов госномеров на ваш автомобиль в соответствии с ГОСТ РФ&nbsp;
+              br
+              | и соответствуют всем требованиям ГУОБДД МВД Росси
+          .banner-second__block
+            img.banner-second__block-icon(src="images/icons/search-big.svg" alt="")
+            button.btn.btn-white.btn-fullwidth.btn-sm Проверить на сайте ГИБДД.РФ
+            p.banner-second__block-text.text-small.
+              *Сведения об изготовителях государственных регистрационных знаков по Ставропольскому краю
+
+    section.section.section-numberorder
+      .container
+        .section-numberorder__inner
+          img.section-numberorder__image(src="images/car-dublikat.jpg" alt="")
+          .section-numberorder__content
+            ul.section-numberorder__list
+              li.section-numberorder__item
+                .section-numberorder__icon
+                  img.section-numberorder__icon-image(src="images/icons/dublicat-1.svg" alt="")
+                p.section-numberorder__text Срок изготовления
+                  //- span.text-blue 5 минут
+              li.section-numberorder__item
+                .section-numberorder__icon
+                  img.section-numberorder__icon-image(src="images/icons/dublicat-2.svg" alt="")
+                  img.section-numberorder__icon-second(src="images/icons/dublicat-2-blue-water.svg" alt="")
+                p.section-numberorder__text Дубликаты устойчивы к погодным условиям и механическим воздействиям (мойка, камни)
+              li.section-numberorder__item
+                .section-numberorder__icon
+                  img.section-numberorder__icon-image(src="images/icons/dublicat-3.svg" alt="")
+                  img.section-numberorder__icon-second(src="images/icons/dublicat-3-blue-line.svg" alt="")
+                p.section-numberorder__text Номерной знак не надо сверлить, он уже имеет специальные отверстия
+            button.section-numberorder__btn.btn Заказать
+
+        h2.section-numberorder__title Сколько это будет стоить?
+        .section-numberorder__inner
+          .section-numberorder__carnumber.carnumber
+            .carnumber__block
+              img.carnumber__block-image(src="images/main/nomernoy-znak.png" alt="")
+            .carnumber__price
+              .carnumber__price-count 1 шт.
+              .carnumber__price-num 1 000 ₽
+          .section-numberorder__carnumber.carnumber
+            .carnumber__block
+              img.carnumber__block-image(src="images/main/nomernoy-znak.png" alt="")
+              img.carnumber__block-image(src="images/main/nomernoy-znak.png" alt="")
+            .carnumber__price
+              .carnumber__price-count 2 шт.
+              .carnumber__price-num 1500 ₽
+
+    section.section.section-question.section-gray
+      .container
+        .section-question__inner
+          .section-question__content
+            h2.section-question__title Остались вопросы?
+              br
+              span Свяжитесь с нами
+            p.section-question__text Если вы столкнулись с трудностями при&nbsp;
+              | работе с Бери Рули, у Вас есть какие-то замечания или предложения — позвоните.
+              br
+              span Прием звонков с 09:00 до 18:00
+            p.section-question__phone +7 (962) 495 55 54
+          form.section-question__form.form
+            input.form__input.input(type="text" placeholder="Ваше имя")
+            input.form__input.input(type="text" placeholder="Номер телефона")
+            input.form__input.input(type="text" placeholder="Ваш вопрос")
+            .section-question__submit
+              .form__checkbox.checkbox
+                input.checkbox__input(type="checkbox" id="question-check")
+                label.checkbox__label(for="question-check") Согласие на обработку персональных данных
+
+              button.btn.btn-sm(type="submit") Задать вопрос
+
+  include pug/includes/footer.pug

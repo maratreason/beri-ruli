@@ -26,6 +26,12 @@
     letter-spacing: 0.08rem;
   }
 
+  &.btn-white {
+    color: var(--black);
+    font-size: 1.6rem;
+    background: var(--white);
+  }
+
   &.btn-fullwidth {
     justify-content: center;
     width: 100%;
@@ -56,7 +62,7 @@
   }
 
   &.btn-sm {
-    @include text-card-btn;
+    @include text-trigger;
 
     padding: 1.5rem;
     letter-spacing: 0;
@@ -79,14 +85,6 @@
       font-size: 1.4rem;
       line-height: 1.8rem;
     }
-  }
-
-  &.btn-big-rounded {
-    width: 14rem;
-    height: 14rem;
-    color: var(--blue-dark);
-    border-color: var(--yellow-dark);
-    border-radius: 50%;
   }
 
   &.btn-up {
@@ -148,173 +146,6 @@
     background: var(--green);
   }
 }
-
-// Dropdown buttons
-.dropdown {
-  position: relative;
-  display: flex;
-  gap: 0.4rem;
-  align-items: center;
-  justify-content: space-between;
-  width: 30.7rem;
-  height: 5.2rem;
-  padding: 1.6rem 3.8rem;
-  color: var(--green);
-  font-size: 1.4rem;
-  font-family: ProximaNova-Bold, sans-serif;
-  line-height: 1.7rem;
-  text-transform: uppercase;
-  border-radius: 0.2rem;
-
-  &--blue {
-    background: var(--blue);
-  }
-
-  &--green {
-    color: var(--white);
-    background: var(--green);
-
-    .dropdown__icon {
-      path {
-        stroke: var(--white);
-      }
-    }
-  }
-
-  &--big {
-    width: 38rem;
-    height: 6.8rem;
-    font-size: 1.8rem;
-    line-height: 2.2rem;
-    border-radius: 0.4rem;
-
-    @media screen and (max-width: 440px) {
-      width: 100%;
-      padding: 1rem 2rem;
-      font-size: 1.4rem;
-      line-height: 1.8rem;
-    }
-  }
-
-  &__icon {
-    width: 2.2rem;
-    height: 2rem;
-
-    path {
-      stroke: var(--green);
-    }
-
-    &-chevron {
-      width: 1.4rem;
-      height: 1rem;
-      transform: rotate(90deg);
-      transition: 0.5s;
-
-      path {
-        stroke: var(--green);
-      }
-    }
-  }
-
-  &__list {
-    position: absolute;
-    top: 7.2rem;
-    left: 0;
-    z-index: 1;
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    color: var(--black);
-    font-size: 1.4rem;
-    font-family: ProximaNova-Regular, sans-serif;
-    line-height: 1.7rem;
-    background: var(--white);
-    border: 1px solid #eee;
-    border-radius: 0.4rem;
-
-    &.is--active {
-      display: flex;
-    }
-  }
-
-  &__item {
-    padding: 2rem 0;
-
-    &:not(:last-child) {
-      border-bottom: 1px solid #eee;
-    }
-
-    &:hover {
-      background: var(--blue);
-    }
-  }
-}
-
-// .filter-button {
-//   display: flex;
-//   gap: 0.8rem;
-//   align-items: center;
-//   min-width: 22.3rem;
-//   padding: 1.2rem 1.4rem;
-//   color: var(--green);
-//   font-size: 1.7rem;
-//   font-family: ProximaNova-Bold, sans-serif;
-//   line-height: 2.4rem;
-//   background: var(--white);
-//   cursor: pointer;
-
-//   &__icon {
-//     height: 2.5rem;
-//   }
-
-//   &--blue {
-//     background: var(--blue);
-//   }
-
-//   &--validated {
-//     color: var(--black);
-//     border-bottom: 0.2rem solid var(--green);
-
-//     .filter-button__icon {
-//       height: 2.5rem;
-  
-//       path {
-//         stroke: var(--black);
-//       }
-//     }
-//   }
-
-//   &--small {
-//     width: 19rem;
-//     height: 4rem;
-//     padding: 0.7rem 1.2rem;
-//     font-size: 1.4rem;
-//     line-height: 2rem;
-//   }
-// }
-
-// .extra-btn {
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   width: 15.8rem;
-//   height: 7.2rem;
-//   padding: 2rem;
-//   font-size: 1.2rem;
-//   font-family: ProximaNova-Semibold, sans-serif;
-//   line-height: 1.5rem;
-//   text-transform: uppercase;
-//   cursor: pointer;
-
-//   &--white {
-//     background: var(--white);
-//   }
-
-//   &--blue {
-//     color: var(--green);
-//     background: var(--blue);
-//   }
-// }
 
 .cheeps-btn {
   display: flex;

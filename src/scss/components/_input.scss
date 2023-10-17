@@ -22,13 +22,20 @@
   }
 
   &.input-sm {
+    @include text-bold;
+
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 7.5rem;
+    width: 16rem;
     min-width: 7.5rem;
     padding: 0;
     text-align: center;
+    background: var(--navigation-bg);
+  }
+
+  &.input-blue {
+    border: 1px solid var(--blue);
   }
 
   &.input-range {
@@ -230,4 +237,62 @@ textarea.textarea {
     height: 43rem;
     border-radius: 1rem;
   }
+}
+
+
+
+.checkbox-rounded {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+
+  &__label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+
+    .action {
+      order: -1;
+
+      .checkbox-rounded__input {
+        appearance: none;
+
+        &:checked {
+          ~ .checkbox-rounded__round {
+            background-color: var(--navigation-bg);
+          }
+
+          ~ .checkbox-rounded__round::before {
+            left: calc(100% - 2.4rem);
+            background-color: var(--blue);
+          }
+        }
+      }
+    }
+  }
+
+  &__round {
+    position: relative;
+    display: block;
+    width: 4.4rem;
+    height: 2.5rem;
+    background-color: var(--navigation-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 1.5rem;
+
+    &::before {
+      position: absolute;
+      top: -0.1rem;
+      left: -0.24rem;
+      width: 2.5rem;
+      height: 2.5rem;
+      background-color: var(--blue);
+      border-radius: 2rem;
+      transition: left 0.5s;
+      content: "";
+    }
+  }
+
 }

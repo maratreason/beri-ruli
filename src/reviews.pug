@@ -1,0 +1,121 @@
+extends pug/base.pug
+
+append content
+  include pug/includes/header.pug
+
+  main.main(id="main")
+    section.section-empty
+    .breadcrumbs-wrapper
+      .container
+        +breadcrumbs("Главная", "Отзывы")
+
+    section.section-reviews
+      .container
+        .section-reviews__inner
+          h1.section-reviews__title Стали счастливыми владельцами авто
+          p.section-reviews__subtitle Стали счастливыми владельцами авто
+          .section-reviews__columns
+            ul.section-reviews__list
+              li.section-reviews__item.review
+                img.review__image(src="images/user.jpg" alt="")
+                .review__content
+                  .review__title Евгений Морозов
+                  .review__stars
+                    img.review__star(src="images/icons/rating-star.svg" alt="")
+                    img.review__star(src="images/icons/rating-star.svg" alt="")
+                    img.review__star(src="images/icons/rating-star.svg" alt="")
+                    img.review__star(src="images/icons/rating-star.svg" alt="")
+                    img.review__star(src="images/icons/rating-star.svg" alt="")
+                  .review__text.
+                    Знаю о бери рули уже не первый год, но никогда раньше лично не обращался.
+                    Захотел подработать, нужна была машина. Обратился, взял без проблем.
+                    Именно ту, которую хотел, еще и на газу Знаю о бери рули уже не первый год,
+                    но никогда раньше лично не обращался.
+              li.section-reviews__item.review
+                img.review__image(src="images/user.jpg" alt="")
+                .review__content
+                  .review__title Евгений Морозов
+                  .review__stars
+                    img.review__star(src="images/icons/rating-star.svg" alt="")
+                    img.review__star(src="images/icons/rating-star.svg" alt="")
+                    img.review__star(src="images/icons/rating-star.svg" alt="")
+                    img.review__star(src="images/icons/rating-star.svg" alt="")
+                    img.review__star(src="images/icons/rating-star-light.svg" alt="")
+                  .review__text.
+                    Знаю о бери рули уже не первый год, но никогда раньше лично не обращался.
+                    Захотел подработать, нужна была машина. Обратился, взял без проблем.
+                    Именно ту, которую хотел, еще и на газу Знаю о бери рули уже не первый год,
+                    но никогда раньше лично не обращался.
+              li.section-reviews__item.review
+                img.review__image(src="images/user.jpg" alt="")
+                .review__content
+                  .review__title Евгений Морозов
+                  .review__stars
+                    img.review__star(src="images/icons/rating-star.svg" alt="")
+                    img.review__star(src="images/icons/rating-star.svg" alt="")
+                    img.review__star(src="images/icons/rating-star.svg" alt="")
+                    img.review__star(src="images/icons/rating-star.svg" alt="")
+                    img.review__star(src="images/icons/rating-star-light.svg" alt="")
+                  .review__text.
+                    Знаю о бери рули уже не первый год, но никогда раньше лично не обращался.
+                    Захотел подработать, нужна была машина. Обратился, взял без проблем.
+                    Именно ту, которую хотел, еще и на газу Знаю о бери рули уже не первый год,
+                    но никогда раньше лично не обращался.
+              li.section-reviews__item.review
+                img.review__image(src="images/user.jpg" alt="")
+                .review__content
+                  .review__title Евгений Морозов
+                  .review__stars
+                    img.review__star(src="images/icons/rating-star.svg" alt="")
+                    img.review__star(src="images/icons/rating-star.svg" alt="")
+                    img.review__star(src="images/icons/rating-star.svg" alt="")
+                    img.review__star(src="images/icons/rating-star.svg" alt="")
+                    img.review__star(src="images/icons/rating-star-light.svg" alt="")
+                  .review__text.
+                    Знаю о бери рули уже не первый год, но никогда раньше лично не обращался.
+                    Захотел подработать, нужна была машина. Обратился, взял без проблем.
+                    Именно ту, которую хотел, еще и на газу Знаю о бери рули уже не первый год,
+                    но никогда раньше лично не обращался.
+
+            .section-reviews__add
+              img.section-reviews__add-icon(src="images/icons/message-rouded.svg" alt="")
+              p.section-reviews__add-text.
+                Для улучшения качества обслуживания просим оставить отзыв о нашей работе.
+              button.btn.btn-white.btn-fullwidth.btn-sm Оставить отзыв
+    
+          .section-reviews__pagination.pagination
+            ul.pagination__pages
+              li.pagination__page.pagination__page-arrow
+                svg(width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg" data-select-icon)
+                  path(id="Arrow" fill-rule="evenodd" clip-rule="evenodd" d="M6.08607 7L0 1.5L1.65984 0L6.08607 4L10.5123 0L12.1721 1.6L6.08607 7Z" fill="#fff")
+              li.pagination__page 1
+              li.pagination__page.is--active 2
+              li.pagination__page ...
+              li.pagination__page 9
+              li.pagination__page.pagination__page-arrow
+                svg(width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg" data-select-icon)
+                  path(id="Arrow" fill-rule="evenodd" clip-rule="evenodd" d="M6.08607 7L0 1.5L1.65984 0L6.08607 4L10.5123 0L12.1721 1.6L6.08607 7Z" fill="#fff")
+
+    section.section.section-question.section-gray
+      .container
+        .section-question__inner
+          .section-question__content
+            h2.section-question__title Остались вопросы?
+              br
+              span Свяжитесь с нами
+            p.section-question__text Если вы столкнулись с трудностями при&nbsp;
+              | работе с Бери Рули, у Вас есть какие-то замечания или предложения — позвоните.
+              br
+              span Прием звонков с 09:00 до 18:00
+            p.section-question__phone +7 (962) 495 55 54
+          form.section-question__form.form
+            input.form__input.input(type="text" placeholder="Ваше имя")
+            input.form__input.input(type="text" placeholder="Номер телефона")
+            input.form__input.input(type="text" placeholder="Ваш вопрос")
+            .section-question__submit
+              .form__checkbox.checkbox
+                input.checkbox__input(type="checkbox" id="question-check")
+                label.checkbox__label(for="question-check") Согласие на обработку персональных данных
+              button.btn.btn-sm(type="submit") Задать вопрос
+
+  include pug/includes/footer.pug

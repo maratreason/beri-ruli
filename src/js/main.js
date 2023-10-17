@@ -102,145 +102,42 @@ window.addEventListener("DOMContentLoaded", () => {
 
 
 
-// 
 // Select input script
-//  
-// const selects = document.querySelectorAll("[data-select]");
+const selects = document.querySelectorAll("[data-select]");
 
-// if (selects) {
-//   selects.forEach((select) => {
-//     select.addEventListener("click", (e) => {
-//       e.preventDefault();
-//       const list = select.querySelector(".select__list");
-//       const icon = select.querySelector("[data-select-icon]");
-//       const current = select.querySelector(".select__current span");
+if (selects) {
+  selects.forEach((select) => {
+    select.addEventListener("click", (e) => {
+      e.preventDefault();
+      const list = select.querySelector(".select__list");
+      const icon = select.querySelector("[data-select-icon]");
+      const current = select.querySelector(".select__current span");
 
-//       select.querySelectorAll(".select__item").forEach((el) => {
-//         if (current.textContent === el.textContent) {
-//           el.classList.add("select__item--active");
-//         }
-//       });
+      select.querySelectorAll(".select__item").forEach((el) => {
+        if (current.textContent === el.textContent) {
+          el.classList.add("select__item--active");
+        }
+      });
 
-//       list.classList.toggle("show");
-//       icon.style.transform = "rotate(180deg)";
+      list.classList.toggle("show");
+      icon.style.transform = "rotate(180deg)";
 
-//       if (list.classList.contains("show")) {
-//         icon.style.transform = "rotate(180deg)";
-//       } else {
-//         icon.style.transform = "rotate(0deg)";
-//       }
+      if (list.classList.contains("show")) {
+        icon.style.transform = "rotate(180deg)";
+      } else {
+        icon.style.transform = "rotate(0deg)";
+      }
 
-//       if (e.target.classList.contains("select__item")) {
-//         current.textContent = e.target.textContent;
-//         select.querySelectorAll(".select__item").forEach((el) => el.classList.remove("select__item--active"));
-//         e.target.classList.add("select__item--active");
-//         list.classList.remove("show");
-//         icon.style.transform = "rotate(0deg)";
-//       }
-//     });
-//   });
-// }
-
-// /**
-//  * filter select buttons
-//  */
-// const filter = document.querySelectorAll("[data-filter]");
-
-// if (filter) {
-//   filter.forEach((el) => {
-//     const current = el.querySelector("[data-filter-text] span");
-
-//     el.addEventListener("click", (e) => {
-//       const list = el.querySelector("[data-filter-list]");
-//       const arrow = el.querySelector(".filter-arrow");
-
-//       if (list) {
-//         list.classList.toggle("is--active");
-//       }
-
-//       if (list.classList.contains("is--active")) {
-//         arrow.style.transform = "rotate(180deg)";
-//       } else {
-//         arrow.style.transform = "rotate(0deg)";
-//       }
-
-//       if (e.target.classList.contains("filter-item")) {
-//         current.textContent = e.target.textContent;
-//       }
-//     });
-//   });
-// }
-
-// /**
-//  * Range slider
-//  */
-// function rangeSlider(selector, symbol) {
-//   const parent = document.querySelector(selector);
-
-//   if (parent) {
-//     const rangeInput = parent.querySelectorAll(".aside-block__range-input input");
-//     const priceInput = parent.querySelectorAll(".aside-block__price-input .field input");
-//     const progress = parent.querySelector(".aside-block__range .slider .progress");
-//     let priceGap = 10;
-//     const minPrice = parent.querySelector(".input-min");
-//     const maxPrice = parent.querySelector(".input-max");
-
-//     progress.style.left = (parseInt(rangeInput[0].value) / rangeInput[0].max) * 100 + "%";
-//     progress.style.right = 100 - (parseInt(rangeInput[1].value) / rangeInput[1].max) * 100 + "%";
-
-//     // range data
-//     if (rangeInput) {
-//       rangeInput.forEach((input) => {
-//         input.addEventListener("input", (e) => {
-//           let minVal = parseInt(rangeInput[0].value);
-//           let maxVal = parseInt(rangeInput[1].value);
-
-//           if (maxVal - minVal < priceGap) {
-//             if (e.target.className === "range-min") {
-//               rangeInput[0].value = maxVal - priceGap;
-//             } else {
-//               rangeInput[1].value = minVal + priceGap;
-//             }
-//           } else {
-//             priceInput[0].value = minVal;
-//             priceInput[1].value = maxVal;
-
-//             progress.style.left = (minVal / rangeInput[0].max) * 100 + "%";
-//             progress.style.right = 100 - (maxVal / rangeInput[1].max) * 100 + "%";
-//             minPrice.value = minVal + ` ${symbol}`;
-//             maxPrice.value = maxVal + ` ${symbol}`;
-//           }
-//         });
-//       });
-//     }
-
-//     // input field data
-//     if (priceInput) {
-//       priceInput.forEach((input) => {
-//         input.addEventListener("input", (e) => {
-//           let minVal = parseInt(priceInput[0].value);
-//           let maxVal = parseInt(priceInput[1].value);
-
-//           if (maxVal - minVal >= priceGap && maxVal <= 10000) {
-//             if (e.target.classList.contains("input-min")) {
-//               rangeInput[0].value = minVal;
-//               progress.style.left = (minVal / rangeInput[0].max) * 100 + "%";
-//             } else if (e.target.classList.contains("input-max")) {
-//               rangeInput[1].value = maxVal;
-//               progress.style.right = 100 - (maxVal / rangeInput[1].max) * 100 + "%";
-//             }
-
-//             minPrice.textContent = minVal + ` ${symbol}`;
-//             maxPrice.textContent = maxVal + ` ${symbol}`;
-//           }
-//         });
-//       });
-//     }
-//   }
-// }
-
-// rangeSlider(".aside-block__price", "₽");
-// rangeSlider(".aside-block__square", "㎡");
+      if (e.target.classList.contains("select__item")) {
+        current.textContent = e.target.textContent;
+        select.querySelectorAll(".select__item").forEach((el) => el.classList.remove("select__item--active"));
+        e.target.classList.add("select__item--active");
+        list.classList.remove("show");
+        icon.style.transform = "rotate(0deg)";
+      }
+    });
+  });
+}
 
 // /**
 //  * Modal script
@@ -278,49 +175,26 @@ window.addEventListener("DOMContentLoaded", () => {
 // modal("[data-show-modal-3]", "[data-modal-3]", ".backdrop", "is--active", "[data-modal-close]");
 // modal("[data-show-modal-4]", "[data-modal-4]", ".backdrop", "is--active", "[data-modal-close]");
 
-// /**
-//  * Data size check buttons script
-//  */
-// const checkButtons = () => {
-//   const btns = document.querySelectorAll("[data-size-btn]");
+const accordion = (parentSelector) => {
+  const parent = document.querySelector(parentSelector);
 
-//   if (btns) {
-//     btns.forEach((btn) => {
-//       btn.addEventListener("click", (e) => {
-//         e.preventDefault();
+  if (parent) {
+    const header = parent.querySelectorAll("[data-accordion-product-header]");
+    const content = parent.querySelectorAll("[data-accordion-product-content]");
 
-//         e.target.classList.contains("is--active")
-//           ? e.target.classList.remove("is--active")
-//           : e.target.classList.add("is--active");
-//       });
-//     });
-//   }
-// };
+    
+    header.forEach((item, index) => {
+      item.addEventListener("click", (e) => {
+        if (content[index]) {
+          header[index].classList.toggle("is--active");
+          content[index].classList.toggle("is--active");
+        }
+      });
+    });
+  }
+};
 
-// checkButtons();
-
-// const accordion = (parentSelector) => {
-//   const parent = document.querySelector(parentSelector);
-
-//   if (parent) {
-//     const title = parent.querySelectorAll("[data-accordion-title-id]");
-//     const desc = parent.querySelectorAll("[data-accordion-desc-id]");
-
-//     title.forEach((item, index) => {
-//       item.addEventListener("click", (e) => {
-//         if (desc[index]) {
-//           if (title[index].dataset.accordionTitleId === desc[index].dataset.accordionDescId) {
-//             desc[index].classList.add("is--active");
-//           }
-//         } else {
-//           desc[index].classList.remove("is--active");
-//         }
-//       });
-//     });
-//   }
-// };
-
-// accordion("[data-accordion-info]");
+accordion("[data-accordion-product]");
 
 // /**
 //  * Stepper script
